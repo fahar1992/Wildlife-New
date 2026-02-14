@@ -21,7 +21,6 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Update these later (domain/email/phone) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,7 +30,7 @@
     "areaServed": "Worldwide",
     "email": "mailto:info@northprairiewildlife.ca",
     "telephone": "+1-306-290-3237",
-    "url": "https://yourdomain.ca"
+    "url": "https://northprairiewildlife.ca"
   }
   </script>
 </head>
@@ -48,7 +47,8 @@
         </span>
       </a>
 
-      <button class="menu" aria-label="Open menu" id="menuBtn">Menu</button>
+      <!-- type="button" prevents any accidental form-submit behavior -->
+      <button class="menu" aria-label="Open menu" id="menuBtn" type="button">Menu</button>
 
       <nav class="links" id="navLinks">
         <a href="#services">Services</a>
@@ -192,7 +192,7 @@
         <div class="grid3">
           <article class="project card">
             <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1729681995594-f411aa600bb2?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+              <img src="https://images.unsplash.com/photo-1729681995594-f411aa600bb2?auto=format&fit=crop&fm=jpg&q=80&w=1600"
                    alt="Pipeline corridor in a forest landscape" loading="lazy">
             </div>
             <div class="project-body">
@@ -203,7 +203,7 @@
 
           <article class="project card">
             <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1659456148328-b72818225e9d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+              <img src="https://images.unsplash.com/photo-1659456148328-b72818225e9d?auto=format&fit=crop&fm=jpg&q=80&w=1600"
                    alt="Caribou in boreal habitat" loading="lazy">
             </div>
             <div class="project-body">
@@ -214,7 +214,7 @@
 
           <article class="project card">
             <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1686419862210-fa5f122ff005?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+              <img src="https://images.unsplash.com/photo-1686419862210-fa5f122ff005?auto=format&fit=crop&fm=jpg&q=80&w=1600"
                    alt="Wind turbines in a grassland landscape" loading="lazy">
             </div>
             <div class="project-body">
@@ -225,7 +225,7 @@
 
           <article class="project card">
             <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1763824391183-931ce7101902?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+              <img src="https://images.unsplash.com/photo-1763824391183-931ce7101902?auto=format&fit=crop&fm=jpg&q=80&w=1600"
                    alt="Open pit mine landscape" loading="lazy">
             </div>
             <div class="project-body">
@@ -236,7 +236,7 @@
 
           <article class="project card">
             <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1511107157989-045365f9ce90?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+              <img src="https://images.unsplash.com/photo-1511107157989-045365f9ce90?auto=format&fit=crop&fm=jpg&q=80&w=1600"
                    alt="Aerial view of roads through forest" loading="lazy">
             </div>
             <div class="project-body">
@@ -247,7 +247,7 @@
 
           <article class="project card">
             <div class="project-media">
-              <img src="https://images.unsplash.com/photo-1767630867135-5a7693b459bf?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+              <img src="https://images.unsplash.com/photo-1767630867135-5a7693b459bf?auto=format&fit=crop&fm=jpg&q=80&w=1600"
                    alt="Wetland boardwalk at sunset" loading="lazy">
             </div>
             <div class="project-body">
@@ -256,6 +256,7 @@
             </div>
           </article>
         </div>
+      </div>
     </section>
 
     <!-- SECTORS -->
@@ -320,27 +321,32 @@
             <p><strong>Location:</strong> Canada</p>
             <p><strong>Email:</strong> info@northprairiewildlife.ca</p>
             <p><strong>Phone:</strong> +1-306-290-3237</p>
-            <p class="fineprint">
-            </p>
           </div>
 
-          <!-- NETLIFY FORM (works on Netlify once deployed) -->
-          <form class="card form" name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="inquiryForm">
-            <input type="hidden" name="form-name" value="project-inquiry" />
-            <input type="hidden" name="bot-field" />
+          <!-- NETLIFY FORM (NATIVE + RELIABLE) -->
+          <form class="card form"
+                name="project-inquiry"
+                method="POST"
+                action="/thank-you/"
+                data-netlify="true"
+                netlify-honeypot="bot-field">
 
+            <!-- required -->
+            <input type="hidden" name="form-name" value="project-inquiry" />
+
+            <!-- honeypot (ONLY ONCE) -->
             <p style="display:none;">
-  <label>Don’t fill this out: <input name="bot-field" /></label>
-</p>
-            
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
             <div class="row">
               <label for="name">Your name</label>
-              <input id="name" name="name" placeholder="Jane Doe" required />
+              <input id="name" name="name" placeholder="Jane Doe" autocomplete="name" required />
             </div>
 
             <div class="row">
               <label for="email">Your email</label>
-              <input id="email" name="email" type="email" placeholder="jane@company.com" required />
+              <input id="email" name="email" type="email" placeholder="jane@company.com" autocomplete="email" required />
             </div>
 
             <div class="row">
@@ -349,7 +355,7 @@
             </div>
 
             <button class="btn btn-block" type="submit">Submit request</button>
-            <p class="fineprint" id="formNote">We typically reply within 12–24 hours.</p>
+            <p class="fineprint">We typically reply within 12–24 hours.</p>
           </form>
         </div>
       </div>
@@ -372,11 +378,13 @@
   </main>
 
   <script>
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Mobile menu
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
-  menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-</script>
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+  </script>
+</body>
+</html>
