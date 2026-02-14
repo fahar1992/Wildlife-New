@@ -27,7 +27,7 @@
     "@type": "ProfessionalService",
     "name": "NorthPrairie Wildlife & Ecology Consulting",
     "description": "Wildlife & ecology consulting: assessments, impact/risk mitigation, field study design, proposals, SOPs/training, GIS, and regulatory compliance.",
-    "areaServed": "Worldwide",
+    "areaServed": "Canada",
     "email": "mailto:info@northprairiewildlife.ca",
     "telephone": "+1-306-290-3237",
     "url": "https://northprairiewildlife.ca"
@@ -47,7 +47,6 @@
         </span>
       </a>
 
-      <!-- type="button" prevents any accidental form-submit behavior -->
       <button class="menu" aria-label="Open menu" id="menuBtn" type="button">Menu</button>
 
       <nav class="links" id="navLinks">
@@ -55,7 +54,7 @@
         <a href="#projects">Projects</a>
         <a href="#sectors">Sectors</a>
         <a href="#about">About</a>
-        <a class="btn btn-sm" href="#book">Book a call</a>
+        <a class="btn btn-sm" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -75,7 +74,7 @@
           </p>
 
           <div class="cta">
-            <a class="btn" href="#book">Book a call</a>
+            <a class="btn" href="#contact">Book a call</a>
             <a class="btn btn-ghost" href="#projects">See examples</a>
           </div>
 
@@ -115,7 +114,7 @@
             <li>Regulatory compliance support</li>
           </ul>
 
-          <a class="btn btn-block" href="#book">Request a quote</a>
+          <a class="btn btn-block" href="#contact">Request a quote</a>
           <p class="fineprint">Canada-based • Remote/global • Field by arrangement</p>
         </aside>
       </div>
@@ -177,6 +176,11 @@
             </div>
             <p>LOIs, scopes, methods, project plans, and technical writing that wins support.</p>
           </article>
+        </div>
+
+        <div class="note card" style="margin-top:18px;">
+          <strong>Need something specific?</strong> Email us your project details and we’ll recommend the most efficient approach.
+          <a href="#contact" style="margin-left:8px;">Contact →</a>
         </div>
       </div>
     </section>
@@ -256,6 +260,11 @@
             </div>
           </article>
         </div>
+
+        <div class="note card" style="margin-top:18px;">
+          <strong>Want to discuss your project?</strong> Email us and we’ll set up a short free consultation call.
+          <a href="#contact" style="margin-left:8px;">Contact →</a>
+        </div>
       </div>
     </section>
 
@@ -307,51 +316,52 @@
       </div>
     </section>
 
-    <!-- BOOK -->
-    <section class="section" id="book">
+    <!-- CONTACT (replaces the form) -->
+    <section class="section" id="contact">
       <div class="container">
         <div class="section-head">
-          <h2>Book a call / Request a quote</h2>
-          <p>Send your project details — we typically reply within <strong>12–24 hours</strong>.</p>
+          <h2>Contact us</h2>
+          <p>Send an email with your project details and we’ll reply within <strong>12–24 hours</strong>.</p>
         </div>
 
         <div class="contact-grid">
           <div class="card">
-            <h3>Contact</h3>
+            <h3>Contact details</h3>
             <p><strong>Location:</strong> Canada</p>
-            <p><strong>Email:</strong> info@northprairiewildlife.ca</p>
-            <p><strong>Phone:</strong> +1-306-290-3237</p>
+            <p><strong>Email:</strong> <a href="mailto:info@northprairiewildlife.ca">info@northprairiewildlife.ca</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+13062903237">+1-306-290-3237</a></p>
+
+            <div class="note" style="margin-top:14px;">
+              <strong>What to include in your email (copy/paste):</strong>
+              <ul style="margin:10px 0 0 18px;">
+                <li><strong>Project overview:</strong> what you’re doing and why</li>
+                <li><strong>Aim/objectives:</strong> what decisions the work will support</li>
+                <li><strong>Deliverables needed:</strong> e.g., report, survey plan, mitigation plan, maps, SOPs, training, proposal/grant</li>
+                <li><strong>Location + timeline:</strong> where and when you need it</li>
+                <li><strong>Any constraints:</strong> permitting deadlines, field access, seasonal timing, safety requirements</li>
+              </ul>
+              <p style="margin-top:10px;">
+                After we review your email, we’ll contact you to book a <strong>short free consultation call</strong> to understand the project and confirm the best approach.
+              </p>
+            </div>
+
+            <div class="cta" style="margin-top:14px;">
+              <a class="btn" href="mailto:info@northprairiewildlife.ca?subject=Project%20Inquiry%20%E2%80%94%20NorthPrairie%20Wildlife">Email us</a>
+              <a class="btn btn-ghost" href="tel:+13062903237">Call</a>
+            </div>
           </div>
 
-          <!-- NETLIFY FORM (NATIVE + RELIABLE) -->
-          <form class="card form"
-      id="inquiryForm"
-      action="https://formspree.io/f/PASTE_YOUR_FORM_ID_HERE"
-      method="POST">
+          <div class="card">
+            <h3>Response & next steps</h3>
+            <p><strong>Typical response time:</strong> 12–24 hours</p>
+            <p><strong>Next step:</strong> Free intro call to confirm scope, timeline, and deliverables</p>
+            <p><strong>Engagement options:</strong> fixed-fee deliverables, hourly consulting, or retainer support</p>
 
-  <div class="row">
-    <label for="name">Your name</label>
-    <input id="name" name="name" placeholder="Jane Doe" required />
-  </div>
-
-  <div class="row">
-    <label for="email">Your email</label>
-    <input id="email" name="email" type="email" placeholder="jane@company.com" required />
-  </div>
-
-  <div class="row">
-    <label for="message">Project summary</label>
-    <textarea id="message" name="message"
-      placeholder="What do you need help with? Timeline, location, deliverables…"
-      required></textarea>
-  </div>
-
-  <!-- Optional: makes your inbox cleaner -->
-  <input type="hidden" name="subject" value="New inquiry — NorthPrairie Wildlife" />
-
-  <button class="btn btn-block" type="submit">Submit request</button>
-  <p class="fineprint" id="formNote">We typically reply within 12–24 hours.</p>
-</form>
+            <div class="note" style="margin-top:14px;">
+              <strong>Not sure what to ask for?</strong><br/>
+              Just email what you know — we’ll help translate it into a clear scope and the right deliverables.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -365,7 +375,7 @@
         <div class="footer-links">
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
-          <a href="#book">Book</a>
+          <a href="#contact">Contact</a>
         </div>
         <div class="fineprint">© <span id="year"></span> NorthPrairie. All rights reserved.</div>
       </div>
@@ -381,33 +391,5 @@
     const navLinks = document.getElementById("navLinks");
     menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
   </script>
-<script>
-  const form = document.getElementById("inquiryForm");
-  const note = document.getElementById("formNote");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    note.textContent = "Sending…";
-
-    try {
-      const data = new FormData(form);
-
-      const res = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { "Accept": "application/json" }
-      });
-
-      if (res.ok) {
-        form.reset();
-        note.textContent = "Thanks — received! We’ll reply within 12–24 hours.";
-      } else {
-        note.textContent = "Something went wrong. Please email info@northprairiewildlife.ca.";
-      }
-    } catch (err) {
-      note.textContent = "Network error. Please email info@northprairiewildlife.ca.";
-    }
-  });
-</script>
 </body>
 </html>
