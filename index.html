@@ -329,6 +329,10 @@
             <input type="hidden" name="form-name" value="project-inquiry" />
             <input type="hidden" name="bot-field" />
 
+            <p style="display:none;">
+  <label>Don’t fill this out: <input name="bot-field" /></label>
+</p>
+            
             <div class="row">
               <label for="name">Your name</label>
               <input id="name" name="name" placeholder="Jane Doe" required />
@@ -368,37 +372,11 @@
   </main>
 
   <script>
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile menu
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-
-    // Netlify form submit (stays on-page with a success message)
-    const form = document.getElementById("inquiryForm");
-    const note = document.getElementById("formNote");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      note.textContent = "Sending…";
-
-      try {
-        const formData = new FormData(form);
-        const res = await fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        });
-
-        if (!res.ok) throw new Error("Network response was not ok");
-        form.reset();
-        note.textContent = "Thanks — received! We’ll reply within 12–24 hours.";
-      } catch (err) {
-        note.textContent = "Something went wrong. Please email info@yourdomain.ca and we’ll respond ASAP.";
-      }
-    });
-  </script>
-</body>
-</html>
+  // Mobile menu
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+  menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+</script>
