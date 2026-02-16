@@ -455,3 +455,11 @@ input:focus, textarea:focus{ border-color: rgba(126,224,184,0.35); }
   }
   .links.open{ display:flex; }
 }
+.brand-logo{
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
