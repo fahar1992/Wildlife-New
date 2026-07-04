@@ -1,0 +1,10 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">NorthPrairie monogram</title>
+  <desc id="desc">An NP monogram with a north arrow and prairie contour lines.</desc>
+  <rect x="8" y="8" width="224" height="224" rx="50" fill="#143C2C"/>
+  <path d="M53 168V66L123 157V66" stroke="#F3F0E7" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M136 168V66H163C190 66 204 82 204 104C204 126 190 142 163 142H136" stroke="#C8A05A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M117 31L133 54H101L117 31Z" fill="#C8A05A"/>
+  <path d="M41 190C68 175 90 175 117 190C144 205 167 205 199 186" stroke="#7BB28F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M40 207C69 192 91 192 117 207C145 222 169 221 201 203" stroke="#7BB28F" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+</svg>
